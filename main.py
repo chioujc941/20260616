@@ -2,6 +2,7 @@ import asyncio
 from fastapi import FastAPI
 import uvicorn
 import google.generativeai as genai
+import os
 
 api_keys = os.getenv('GEMINI_KEY')
 genai.configure(api_key=api_keys)
