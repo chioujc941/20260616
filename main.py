@@ -1,5 +1,12 @@
-import google.generativeai as genai
+import sys
+import asyncio
+import random
+import discord
 import os
+from discord.ext import commands
+from fastapi import FastAPI
+import uvicorn
+
 api_keys = os.getenv('GEMINI_KEY')
 genai.configure(api_key=api_keys)
 
