@@ -1,5 +1,6 @@
 import google.generativeai as genai
-api_keys = userdata.get('GEMINI_KEY')
+import os
+api_keys = os.getenv('GEMINI_KEY')
 genai.configure(api_key=api_keys)
 
 # 初始化時就定義好它是誰
