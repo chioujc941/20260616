@@ -32,9 +32,9 @@ print(response.text)
 
 # ─── 3. 用同一個事件循環啟動 ───
 async def main():
-    TOKEN = os.getenv("DISCORD_TOKEN")
+    TOKEN = os.getenv("GEMINI_KEY")
     if not TOKEN:
-        print("❌ 錯誤：找不到環境變數 DISCORD_TOKEN")
+        print("❌ 錯誤：找不到環境變數 GEMINI_KEY")
         return
 
     config = uvicorn.Config(app, host="0.0.0.0", port=10000, log_level="info")
